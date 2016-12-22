@@ -27,7 +27,7 @@
 
     <!--In this array you will put the titles for your contact info items. Keep the order consistent between all 3 arrays-->
     <string-array name="about_contact_us_text">
-        <item>S7 Edge Nougat ROM (Xda Thread)</item>
+        <item>S7 Edge Nougat ROM</item>
     </string-array>
 
     <!--In this array you will put the titles for the URL strings that will open once a user clicked on the item-->
@@ -42,7 +42,7 @@
         <item>@drawable/icon_5</item>
     </array>
     <string-array name="about_team_names">
-        <item>ambasadii - Rom Developer</item>
+        <item>ambasadii</item>
     </string-array>
     <string-array name="about_team_links" translatable="false">
         <item>http://forum.xda-developers.com/member.php?u=4074799</item>

@@ -22,7 +22,7 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
     signingConfigs {
         gearSigningConfig {
-            keyAlias keystoreProperties['keyAlias']
+            keyAlias keystoreProperties['key']
             keyPassword keystoreProperties['keyPassword']
             storeFile file(keystoreProperties['storeFile'])
             storePassword keystoreProperties['storePassword']
