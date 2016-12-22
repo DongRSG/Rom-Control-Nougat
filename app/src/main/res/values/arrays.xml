@@ -4,12 +4,10 @@
         it under the terms of the GNU General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
-
         This program is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU General Public License for more details.
-
         You should have received a copy of the GNU General Public License
         along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
 <resources>
@@ -82,5 +80,210 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <string-array name="traffic_state_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="traffic_state_items">
+        <item>Disable view</item>
+        <item>Upload only</item>
+        <item>Download only</item>
+        <item>Upload and Download</item>
+    </string-array>
+    <string-array name="arrow_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="arrow_position_entries">
+        <item>To end of view</item>
+        <item>To start of view</item>
+    </string-array>
+    <string-array name="traffic_style_entries">
+        <item>Normal</item>
+        <item>Bold</item>
+        <item>Italic</item>
+        <item>Bold italic</item>
+    </string-array>
+    <string-array name="traffic_style_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="data_usage_gravity_entries">
+        <item>Right</item>
+        <item>Center</item>
+        <item>Left</item>
+    </string-array>
+    <string-array name="data_usage_gravity_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="data_usage_text_style_entries">
+        <item>Normal</item>
+        <item>Bold</item>
+        <item>Italic</item>
+        <item>Bold italic</item>
+    </string-array>
+    <string-array name="data_usage_text_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="carrier_entries">
+        <item>Actual carrier text</item>
+        <item>Custom text</item>
+    </string-array>
+    <string-array name="carrier_entry_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="toggle_scroll_entries">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="toggle_scroll_values">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="SignalPositionName">
+        <item>Shown on the Right</item>
+        <item>Shown on the Left</item>
+    </string-array>
+    <string-array name="SignalPositionValue">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="dashboard_fav_columns_entries">
+        <item>1 Columns</item>
+        <item>2 Columns</item>
+    </string-array>
+    <string-array name="dashboard_fav_columns_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="dashboard_cat_columns_entries">
+        <item>1 Columns</item>
+        <item>2 Columns</item>
+    </string-array>
+    <string-array name="dashboard_cat_columns_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="dashboard_num_columns_entries">
+        <item>1 Columns</item>
+        <item>2 Columns</item>
+    </string-array>
+    <string-array name="dashboard_num_columns_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="toggle_entries">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="toggle_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="launcher_gesture_entries">
+        <item>Turn off the screen</item>
+        <item>Power menu</item>
+        <item>Recent applications</item>
+        <item>Volume  +</item>
+        <item>Volume  -</item>
+        <item>Dialer</item>
+        <item>Google search</item>
+        <item>Sound Mode: Sound / Vibration / Silent</item>
+        <item>Torchlight</item>
+        <item>Screenshot</item>
+        <item>Notifications panel</item>
+        <item>Switch Wi-Fi</item>
+        <item>Switch Mobile data</item>
+        <item>Switch Bluetooth</item>
+        <item>Clear memory</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="launcher_gesture_values">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>23</item>
+        <item>999</item>
+    </string-array>
+    <string-array name="tw_effect_entries">
+        <item>None</item>
+        <item>Cascade</item>
+        <item>Outer cube</item>
+        <item>Inner Cube</item>
+        <item>Carousal</item>
+        <item>Plain</item>
+        <item>Conveyor</item>
+        <item>Card</item>
+    </string-array>
+    <string-array name="tw_effect_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
     </string-array>
 </resources>

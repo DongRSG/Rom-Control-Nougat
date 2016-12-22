@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceScreen android:title="TW Launcher">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+            android:defaultValue="1"
+            android:entries="@array/tw_effect_entries"
+            android:entryValues="@array/tw_effect_values"
+            android:key="tw_page_effect"
+            android:title="Page Effect"
+            app:packageNameToKill="com.sec.android.app.launcher"
+            app:isSilent="false" />
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:title="Wallpaper Scrolling "
+            android:key="wallpaper_scroll"
+            android:summaryOn="Enabled"
+            android:summaryOff="Disabled"
+            android:defaultValue="false"
+            app:isSilent="false"
+            app:packageNameToKill="com.sec.android.app.launcher" />
+        <PreferenceScreen android:title="Gesture Anywhere on Home screen">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/launcher_gesture_entries"
+                android:title="Double tap"
+                android:key="doubletap"
+                android:summary="%s"
+                android:entryValues="@array/launcher_gesture_values"
+                app:isSilent="false"
+                app:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/launcher_gesture_entries"
+                android:title="Swipe Up"
+                android:key="swipe_up"
+                android:summary="%s"
+                android:entryValues="@array/launcher_gesture_values"
+                app:isSilent="false"
+                app:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:entries="@array/launcher_gesture_entries"
+                android:title="Swipe Down"
+                android:key="swipe_down"
+                android:summary="%s"
+                android:entryValues="@array/launcher_gesture_values"
+                app:isSilent="false"
+                app:packageNameToKill="com.sec.android.app.launcher" />
+        </PreferenceScreen>
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="System Settings">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="hide_qs_favorites"
+            android:summaryOff="Shown"
+            android:summaryOn="Hidden"
+            android:title="Quick Settings Visibility"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+            android:defaultValue="2"
+            android:entries="@array/dashboard_fav_columns_entries"
+            android:title="Number of Columns in Favorite Section"
+            android:key="favorite_columns"
+            android:entryValues="@array/dashboard_fav_columns_values"
+            app:dependentValue="0" />
+
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference
+            android:defaultValue="1"
+            android:entries="@array/dashboard_cat_columns_entries"
+            android:title="Number of Columns in Category Section"
+            android:key="category_columns"
+            android:entryValues="@array/dashboard_cat_columns_values"
+            app:dependentValue="0" />
+        <PreferenceScreen
+            android:title="Settings Background">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="enable_gear_custom_bg_settings"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled"
+                android:title="Enable custom background"/>
+
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_settings"
+                android:title="General Bg Preferences">
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:entries="@array/custom_bg_type_entries"
+                    android:entryValues="@array/custom_bg_type_values"
+                    android:key="gear_custom_bg_type_settings"
+                    android:title="Background type"
+                    app:dependentValue="0"/>
+                <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                    android:defaultValue="255"
+                    android:key="gear_bg_opacity_settings"
+                    android:title="Background opacity"
+                    app:maxValue="255"
+                    app:minValue="0"/>
+            </PreferenceCategory>
+
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_settings"
+                android:title="Custom Image Preferences">
+                <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                    android:key="gear_bg_image_uri_settings"
+                    android:title="Select bg image"/>
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:entries="@array/crop_entries"
+                    android:entryValues="@array/crop_values"
+                    android:key="gear_bg_crop_type_settings"
+                    android:title="Set image scaling type"/>
+            </PreferenceCategory>
+
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_settings"
+                android:title="Color And Gradient Preferences">
+
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="gear_custom_bg_type_settings"
+                    android:key="gear_bg_primary_color_settings"
+                    android:title="Select primary color"/>
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="gear_custom_bg_type_settings"
+                    android:key="gear_second_gradient_color_settings"
+                    android:title="Secondary color (for gradient)"/>
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="gear_custom_bg_type_settings"
+                    android:entries="@array/gradient_entries"
+                    android:entryValues="@array/gradient_values"
+                    android:key="gear_bg_gradient_orientation_settings"
+                    android:title="Gradient orientation"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="Lockscreen">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="true"
+            android:key="unlock_guide_text"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Swipe screen text"
+            app:packageNameToKill="com.android.systemui"
+            app:isSilent="false" />
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="true"
+            android:key="lock_clock"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Clock and date"
+            app:isSilent="false"
+            app:packageNameToKill="com.android.systemui"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="lockscreen_rotate"
+            android:summaryOff="Off"
+            android:summaryOn="On"
+            android:title="Lockscreen Rotation"
+            app:isSilent="false"
+            app:packageNameToKill="com.android.systemui"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="Power Menu">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="true"
+            android:key="power_off"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Power Off"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="true"
+            android:key="restart_menu"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Restart Menu"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="true"
+            android:key="emergency"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Emergency Mode"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="reboot_recovery"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Recovery Mode"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="screenshot"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Screenshot"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="flashlight"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Flashlight"/>
+
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="screen_record"
+            android:summaryOff="Hidden"
+            android:summaryOn="Shown"
+            android:title="Screen Recorder"/>
+
+        <PreferenceScreen android:title="Power Menu Background">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="enable_gear_custom_bg_power"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled"
+                android:title="Enable custom background"/>
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_power"
+                android:title="General Bg Preferences">
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:entries="@array/custom_bg_type_entries"
+                    android:entryValues="@array/custom_bg_type_values"
+                    android:key="gear_custom_bg_type_power"
+                    android:title="Background type"
+                    app:dependentValue="0"/>
+                <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                    android:defaultValue="255"
+                    android:key="gear_bg_opacity_power"
+                    android:title="Background opacity"
+                    app:maxValue="255"
+                    app:minValue="0"/>
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_power"
+                android:title="Custom Image Preferences">
+                <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                    android:key="gear_bg_image_uri_power"
+                    android:title="Select bg image"/>
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:entries="@array/crop_entries"
+                    android:entryValues="@array/crop_values"
+                    android:key="gear_bg_crop_type_power"
+                    android:title="Set image scaling type"/>
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:dependency="enable_gear_custom_bg_power"
+                android:title="Color And Gradient Preferences">
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="gear_custom_bg_type_power"
+                    android:key="gear_bg_primary_color_power"
+                    android:title="Select primary color"/>
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="gear_custom_bg_type_power"
+                    android:key="gear_second_gradient_color_power"
+                    android:title="Secondary color (for gradient)"/>
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="gear_custom_bg_type_power"
+                    android:entries="@array/gradient_entries"
+                    android:entryValues="@array/gradient_values"
+                    android:key="gear_bg_gradient_orientation_power"
+                    android:title="Gradient orientation"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceScreen>
+</PreferenceScreen>
